@@ -78,9 +78,8 @@ function cClaymores:onWorldNetworkObjectDestroy(args)
 end
 
 function cClaymores:onModuleUnload()
-	for i, claymore in pairs(self.claymores) do
+	for _, claymore in pairs(self.claymores) do
 		if IsValid(claymore) then claymore:Remove() end
-		self.claymores[i] = nil
 	end
 end
 
